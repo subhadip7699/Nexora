@@ -1,0 +1,43 @@
+pragma language_version >= 0.22;
+
+import CompactStandardLibrary;
+
+export ledger admin: Bytes<32>;
+export ledger valid_credentials: MerkleTree<16, Bytes<32>>;
+export ledger used_nullifiers: Set<Bytes<32>>;
+
+witness get_secret(): Bytes<32>;
+witness get_merkle_path(leaf: Bytes<32>): MerkleTreePath<16, Bytes<32>>;
+// Demo trust model: get_caller is a client-supplied witness (wallet CPK in the honest UI path).
+// It is not a signature-bound identity by itself; see TRUST_MODEL.md.
+witness get_caller(): Bytes<32>;
+
+constructor(admin_pk: Bytes<32>) {
+  admin = disclose(admin_pk);
+}
+
+export circuit add_valid_credential(credential_hash: Bytes<32>): [] {
+  // Equality against constructor admin; production should strengthen caller binding.
+  assert(admin == disclose(get_caller()), "Only the gate administrator can add credentials");
+  valid_credentials.insert(disclose(credential_hash));
+}
+
+export circuit verify_access(): [] {
+  const sk = get_secret();
+  
+  // 1. Prove membership in the valid_credentials Merkle Tree
+  const leaf = persistentHash<Vector<2, Bytes<32>>>([pad(32, "vault:credential"), sk]);
+  const path = get_merkle_path(leaf);
+  
+  assert(
+    valid_credentials.checkRoot(disclose(merkleTreePathRoot<16, Bytes<32>>(path))),
+    "Invalid credential: not in allowlist"
+  );
+  
+  // 2. Prevent replay attacks using a nullifier derived from the secret
+  const nullifier = persistentHash<Vector<2, Bytes<32>>>([pad(32, "vault:nullifier"), sk]);
+  assert(!used_nullifiers.member(disclose(nullifier)), "Access denied: nullifier already used");
+
+  // Record the nullifier to the public ledger to prevent future reuse.
+  used_nullifiers.insert(disclose(nullifier));
+}
