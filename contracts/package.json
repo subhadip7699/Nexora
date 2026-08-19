@@ -1,0 +1,33 @@
+{
+  "name": "midnight-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compile": "node scripts/compile-contract.mjs",
+    "deploy:preprod": "node scripts/deploy-preprod.mjs",
+    "sync-artifacts": "node scripts/sync-artifacts.mjs",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "@midnight-ntwrk/compact-js": "^2.5.1",
+    "@midnight-ntwrk/compact-runtime": "0.16.0",
+    "@midnight-ntwrk/midnight-js": "^4.1.1",
+    "@midnight-ntwrk/midnight-js-network-id": "^4.1.1",
+    "@midnight-ntwrk/midnight-js-node-zk-config-provider": "^4.1.1",
+    "@midnight-ntwrk/midnight-js-protocol": "^4.1.1",
+    "@midnight-ntwrk/midnight-js-utils": "^4.1.1",
+    "@midnight-ntwrk/wallet-api": "^5.0.0",
+    "@midnightntwrk/wallet-sdk": "^1.2.0",
+    "dotenv": "^17.4.2",
+    "rxjs": "^7.8.1",
+    "ts-node": "^10.9.2",
+    "ws": "^8.19.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.0"
+  }
+}
