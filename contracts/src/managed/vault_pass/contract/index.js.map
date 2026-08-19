@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sourceRoot": "../../../../",
+  "sources": ["src/vault_pass.compact", "compiler/standard-library.compact"],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAWA;;;;;;;;;;;;;;;;MAIA,AAAA,oBAEC;;;;;cAFmC,iBAA0B;;;;;;;;;;;;;;;;;;yCAA1B,iBAA0B;;;;;;;;;sDAA1B,iBAA0B;;;OAE7D;MAED,AAAA,aAkBC;;;;;;;;;;;;;;;;;;;;;;OAAA;;;;;;;;;;GAxBA;EAFD;;;;;UAAY,UAAmB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAP/B;;;;;;;;;yEAA+B;IAC/B;;;;;;;;;;;;;yEAA2D;IAC3D;;;;;;;;;;yEAA8C;IAM5C;;;;;;;2HAAiB,UAAQ;;yEAApB;;;;;;;GACN;ECqDD,AAAA,sBAAyC;;;;;;;oFAG8E;8BAChG;;EAYvB,AAAA,2BACE,mBACA;UAEM,SAAO,oBAAkB,oBAAkB;UAC3C,UAAQ;oBAAkB;oBAAsB;kCACd,QAAM;;EAxFhD,AAAA,iBAAA;mEAAA;;;EAAA,AAAA,kBAAA;qEAAA;;;EAAA,AAAA,kBAAA;oEAAA;;;EAAA,AAAA,sBAAA;yDAAA;;;EDQA,AAAA,aAAgC;;0DAAhC,UAAgC;;;;;;;;;;;;;;GAAA;EAChC,AAAA,kBAAwE,4BAAhD,MAAe;;0DAAvC,eAAwE;0EAAhD,MAAe;;;;;;;;;;;;;;GAAiC;EAMxE,AAAA,uBAEC,4BAFmC,iBAA0B;IAC5D;;;;;;;;;;;;;;;;;;;;;;;;6HAAkC,iBAAe;;;;;;;;;;;;wEAAhC;;GAClB;EAED,AAAA,gBAkBC;UAjBO,IAAiB;UAGjB,MAA8E;2CAAJ,IAAE;UAC5E,MAA4B,sDAAL,MAAI;QAG/B,KAAiB;gEAAsD,MAAI;qDAA3E;;;;;;;;;;;;;;;;;;4KAAA,KAAiB;;;;0HAAA;;UAKb,WAAkF;gDAAJ,IAAE;qDAC9E;;;;;;;;;;;4KAAgC,WAAS;;;;0HAA1B;;IAGvB;;;;;;;;;;2HAAgC,WAAS;;;;;wEAA1B;;GAChB;;;;;;;;;;;;;;;;;;;;IAjCD;qCAAA;;;;;;;;;;;0GAA+B;KAAA;IAC/B;;;;;uCAAA;;;;;;;;;;;;;;;;;;;;;;4GAA2D;;;;;;;;;;;;;;uCAA3D;;;;;;;;;;;;;;;;;;;;;;4GAA2D;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;KAAA;IAC3D;;;;;uCAAA;;;;;;;;;;;;;;;;4GAA8C;;;;;;wCAA9C;;;;;;;;;;;;6GAA8C;;;;;;;;;;;;;;uCAA9C;;;;;;;;;;;;;;;4GAA8C;;;;;;;;;KAAA;;;;;;;;;;;;"
+}
